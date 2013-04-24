@@ -1,4 +1,6 @@
 dereel
 ======
 
-Dereel Community Website (awestruct)
+Source files for the Dereel Community Website (awestruct).
+
+Moving from Wordpress because Wordpress is a massive pain.
