@@ -16,7 +16,10 @@
       %i.icon-tag
       %a{:href=>page.post.url} permalink
     - if site.disqus
-      %span.comments |#{page.post.disqus_comments_link}
+      %span.comments
+        |
+        %i.icon-comment
+        #{page.post.disqus_comments_link}
   - if page.include_comments
     #comments
       - if site.disqus
