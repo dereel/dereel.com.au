@@ -19,3 +19,7 @@ I have migrated all the old posts, images and other content over to this new sys
 I have not yet migrated over the comments (I am still deciding how best to do it).
 I have done my best to ensure that URLs remain consistent between the old Wordpress
 and new layout but if you find any 404's please let me know (comment on this news post).
+
+If you find a bug in the website please [lodge it as an
+issue](https://github.com/scottweston/dereel/issues) against the Github
+project.

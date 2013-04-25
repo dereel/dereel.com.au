@@ -4,18 +4,19 @@
   %header.header
     %h2.title
       %a{:href=>page.post.url}= page.post.title
-    .byline
-      %span.author
-        Posted by
-        = page.post.author
-      %span.dateinline on #{page.post.date.strftime('%b %d, %Y')}
-      - if site.disqus
-        %span.comments |#{page.post.disqus_comments_link}
   .body
     ~ page.post.content
   .footer{:style=>"clear:both;"}
-    %i.icon-tag
-    %a{:href=>page.post.url} permalink
+    %span.author
+      Posted by
+      = page.post.author
+    %span.dateinline on #{page.post.date.strftime('%b %d, %Y')}
+    %span.permalink
+      |
+      %i.icon-tag
+      %a{:href=>page.post.url} permalink
+    - if site.disqus
+      %span.comments |#{page.post.disqus_comments_link}
   - if page.include_comments
     #comments
       - if site.disqus
