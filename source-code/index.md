@@ -71,7 +71,7 @@ from the top of the repository (ie. one directory above `news/`):
 
     $ cd ..
     $ awestruct -d --force
-    [ browse to [http://localhost:4242](http://localhost:4242) and check you post ]
+    [ browse to http://localhost:4242 and check you post ]
 
 Once you are happy with your new post you can submit it back into Github where it will be deployed
 the next time the website is updated:
