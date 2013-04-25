@@ -18,17 +18,29 @@ The entire source code for this website is available at: [github.com/scottweston
 
 ### Example install of awestruct for a Debian 6.0.7 system
 
-    $ sudo apt-get install ruby1.9.1 rubygems libxml2-dev libxslt-dev rake git
+    $ sudo apt-get install ruby1.9.1 ruby1.9.1-dev rubygems libxml2-dev libxslt-dev rake git
     $ sudo ln -sf ruby1.9.1 /usr/bin/ruby     # change to use ruby1.9.1
-    $ sudo ln -sf gem1.9.1 /usr/bin/gem       # change to use ruby1.9.1
+    $ sudo ln -sf gem1.9.1 /usr/bin/gem       # change to use gem1.9.1
     $ sudo gem install htmlcompressor coffee-script uglifier therubyracer RedCloth redcarpet rb-inotify
     $ sudo gem install awestruct
+    [ add /var/lib/gems/1.9.1/bin to your path based on your shell ]
     $ git clone https://github.com/scottweston/dereel.git
     $ cd dereel
     $ awestruct -d --force
 
-Now browse to [http://localhost:4242](http://localhost:4242) to view the development site. You need ruby1.9
-or greated because the Atomizer extention requires `Datetime.xmlschema()` which was introduced in ruby1.9.
+Now browse to [http://localhost:4242](http://localhost:4242) to view the
+development site.
+
+You need Ruby1.9 or greated because the `Atomizer` extension requires
+`Datetime.xmlschema()` which was introduced in Ruby1.9. If you must
+run on Ruby1.8 then you will need to disable the Atomizer by commenting
+the following line in `_ext/pipeline.rb`:
+
+    extension Awestruct::Extensions::Atomizer.new(:posts, '/news/atom.xml', :feed_title=>'dereel.com.au')
+
+If you do not comment out the `Atomizer` you will get the following error:
+
+    NoMethodError: undefined method `xmlschema' for DateTime:Class
 
 ### How to submit content
 
