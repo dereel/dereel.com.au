@@ -17,6 +17,8 @@
         .container
           %a.brand{ :href=>"#{site.base_url}" } #{site.short_name}
           %ul.nav
+            %li{:class=>('active' if page.url =~ /^\/news\//)}<
+              %a{ :href=>"#{site.base_url}/news/" } News
             %li{:class=>('active' if page.url =~ /^\/about\//)}<
               %a{ :href=>"#{site.base_url}/about/" } About Dereel
             %li{:class=>('active' if page.url =~ /^\/community-information\//)}<
@@ -27,7 +29,8 @@
               %a{ :href=>"#{site.base_url}/source-code/" } Source Code
     .container
       .hero-unit{:style=>'background: url(\'/images/dereel-bg.png\') no-repeat 50% 50%;'}
-        %h1 #{site.title}
+        %h1 
+          %a{:href=>"/"}= site.title
         %p #{site.tagline}
 
       .row-fluid
