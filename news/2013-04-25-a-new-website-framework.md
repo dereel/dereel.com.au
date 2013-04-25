@@ -12,7 +12,7 @@ Wordpress site with these constant attacks. So now we're moving to something
 more modern.
 
 All the content for the Dereel community website is now hosted on [Github](http://github.com/)
-and is compliled and deploy by a program called [{:awestruct}](http://awestruct.org/). You can
+and is compiled and deployed by a program called [{:awestruct}](http://awestruct.org/). You can
 find out more details on the [source code](/source-code) page.
 
 I have migrated all the old posts, images and other content over to this new system.
