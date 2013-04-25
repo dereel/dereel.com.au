@@ -16,11 +16,12 @@ The entire source code for this website is available at: [github.com/scottweston
 1. Run a development instance of the website on your system:
    `$ awestruct -d --force`
 
-### Example install of awestruct for a Debian system
+### Example install of awestruct for a Debian 6.0.7 system
 
     $ sudo apt-get install ruby1.9.1 rubygems libxml2-dev libxslt-dev rake git
-    $ sudo update-alternatives --config ruby       # change to ruby1.9.1
-    $ sudo gem install htmlcompressor coffee-script uglifier therubyracer RedCloth redcarpet
+    $ sudo ln -sf ruby1.9.1 /usr/bin/ruby     # change to use ruby1.9.1
+    $ sudo ln -sf gem1.9.1 /usr/bin/gem       # change to use ruby1.9.1
+    $ sudo gem install htmlcompressor coffee-script uglifier therubyracer RedCloth redcarpet rb-inotify
     $ sudo gem install awestruct
     $ git clone https://github.com/scottweston/dereel.git
     $ cd dereel
