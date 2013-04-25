@@ -4,11 +4,15 @@ tagline: Dereel's Community Website
 profiles:
   development:
     short_name: Dev
+    discus: dereel
+    discus_developer: true
   production:
     short_name: Home
     base_url: http://dereel.com.au
     google_analytics: UA-17125325-2
+    disqus: dereel
     minify: true
     deploy:
       host: wp01.westonwire.com.au
       path: /var/www/dereel.com.au/html/
+      uncommitted: true

@@ -2,7 +2,7 @@
 %html
   %head
     %meta{ :charset=>'utf-8' }
-    %title An awesome site 
+    %title #{site.title}
     %meta{ :name=>'viewport', :content=>'width=device-width, initial-scale=1.0' }
     :css
       body {
@@ -15,15 +15,43 @@
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
-          %a.brand{ :href=>"#{site.base_url}" } Project Name
+          %a.brand{ :href=>"#{site.base_url}" } #{site.short_name}
           %ul.nav
-            %li
-              %a{ :href=>"#{site.base_url}" } Home
+            %li{:class=>('active' if page.url =~ /^\/about\//)}<
+              %a{ :href=>"#{site.base_url}/about/" } About Dereel
+            %li{:class=>('active' if page.url =~ /^\/community-information\//)}<
+              %a{ :href=>"#{site.base_url}/community-information/" } Community Information
+            %li{:class=>('active' if page.url =~ /^\/town-hall\//)}<
+              %a{ :href=>"#{site.base_url}/town-hall/" } Town Hall &amp; Community Centre
+            %li{:class=>('active' if page.url =~ /^\/source-code\//)}<
+              %a{ :href=>"#{site.base_url}/source-code/" } Source Code
     .container
-      ~ content
+      .hero-unit{:style=>'background: url(\'/images/dereel-bg.png\') no-repeat 50% 50%;'}
+        %h1 #{site.title}
+        %p #{site.tagline}
+
+      .row-fluid
+        .span7.offset1
+          ~ content
+
+        .span3.offset1
+          - if site.information
+            %h4 Information
+            %ul
+              - for info in site.information
+                %li
+                  %a{:href=>info.url}= info.title
+          - if site.links
+            %h4 Local Links
+            %ul
+              - for link in site.links
+                %li
+                  %a{:href=>link.url}= link.title
       %hr
       %footer
-        %p &copy; Organization #{Date.today.year}
-    -# Uncomment script tags (remove leading -#) when you're ready to use behaviors
-    -# %script{ :type=>'text/javascript', :src=>'//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js' }
-    -# %script{ :type=>'text/javascript', :src=>"#{site.base_url}/javascripts/bootstrap-collapse.js" }
+        %p &copy; dereel.com.au #{Date.today.year}
+
+    %script{ :type=>'text/javascript', :src=>'//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js' }
+    %script{ :type=>'text/javascript', :src=>"#{site.base_url}/javascripts/bootstrap-collapse.js" }
+    - if site.google_analytics
+      = google_analytics_async
