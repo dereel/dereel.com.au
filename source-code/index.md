@@ -18,14 +18,16 @@ The entire source code for this website is available at: [github.com/scottweston
 
 ### Example install of awestruct for a Debian system
 
-    $ sudo apt-get install rubygems libxml2 libxslt rake
-    $ sudo gem install htmlcompressor coffee-script uglifier theruberracer RedCloth redcarpet
+    $ sudo apt-get install ruby1.9.1 rubygems libxml2-dev libxslt-dev rake git
+    $ sudo update-alternatives --config ruby       # change to ruby1.9.1
+    $ sudo gem install htmlcompressor coffee-script uglifier therubyracer RedCloth redcarpet
     $ sudo gem install awestruct
     $ git clone https://github.com/scottweston/dereel.git
     $ cd dereel
     $ awestruct -d --force
 
-Now browse to [http://localhost:4242](http://localhost:4242) to view the development site.
+Now browse to [http://localhost:4242](http://localhost:4242) to view the development site. You need ruby1.9
+or greated because the Atomizer extention requires `Datetime.xmlschema()` which was introduced in ruby1.9.
 
 ### How to submit content
 
