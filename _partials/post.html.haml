@@ -13,7 +13,7 @@
         %span.comments |#{page.post.disqus_comments_link}
   .body
     ~ page.post.content
-  .footer
+  .footer{:style=>"clear:both;"}
     %i.icon-tag
     %a{:href=>page.post.url} permalink
   - if page.include_comments
