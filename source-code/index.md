@@ -62,3 +62,24 @@ You can replace the extention of the file (`.md`) with `.html.haml` if you want 
 if you prefer `textile` markdown. Also be aware that the text between the `---` lines is YAML and so you will
 need to put text containing `:` in quotes (`"`) and if you do that then escape any `"`'s
 
+Once you've created your post file add it to git (assuming you're in the `news/` directory):
+
+    $ git add YYYY-MM-DD-a-url-safe-unique-title-similar-to-posts-title.md
+
+Now launch the development server and check that the file compiles and renders correctly, this needs to done
+from the top of the repository (ie. one directory above `news/`):
+
+    $ cd ..
+    $ awestruct -d --force
+    [ browse to [http://localhost:4242](http://localhost:4242) and check you post ]
+
+Once you are happy with your new post you can submit it back into Github where it will be deployed
+the next time the website is updated:
+
+    $ git commit -a
+    [ add a short description of the change, e.g. "add news about ___" ]
+    $ git push
+    [ enter your Github username and password ]
+
+After this is complete I will receive an email notifying me of the commit and I will endevour to
+deploy your change to the server as soon as possible.

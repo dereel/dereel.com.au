@@ -4,8 +4,8 @@ author: Dereel Community Project
 profiles:
   development:
     short_name: Dev
-    discus: dereel
-    discus_developer: true
+    disqus: dereel
+    disqus_developer: true
   production:
     short_name: Home
     base_url: http://dereel.com.au
