@@ -8,7 +8,10 @@
       body {
         padding-top: 60px;
       }
-    %link{ :rel=>'stylesheet', :type=>'text/css', :href=>"#{site.base_url}/stylesheets/styles.css" }
+    %link(rel='shortcut icon' type="image/png" href="#{site.base_url}/images/favicon.png")
+    %link(rel='apple-touch-icon' type="image/png" href="#{site.base_url}/images/favicon.png")
+    %link(rel='alternate' type='application/atom+xml' href='/news/atom.xml' title='dereel.com.au &raquo; Feed')
+    %link(rel='stylesheet' type='text/css' href="#{site.base_url}/stylesheets/styles.css")
     /[if lt IE 9]
       %script{ :type=>'text/javascript', :src=>'//html5shim.googlecode.com/svn/trunk/html5.js' }
   %body
