@@ -23,6 +23,6 @@ In the current (2007) drought it is almost dry.
 
 (From [wikipedia](http://en.wikipedia.org/wiki/Dereel,_Victoria)).
 
-![Dereel Hall, Community Centre and CFA Shed](http://upload.wikimedia.org/wikipedia/commons/9/9f/Dereel-hall-and-CFA.jpeg)
+![Dereel Hall, Community Centre and CFA Shed](http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Dereel_Soldiers_Memorial_Hall_and_CFA_shed.jpeg/640px-Dereel_Soldiers_Memorial_Hall_and_CFA_shed.jpeg)
 
 ![Dereel Census Area](http://dereel.com.au/wp-content/uploads/2010/07/dereelcensusarea.png)
