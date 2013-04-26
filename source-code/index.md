@@ -73,8 +73,8 @@ from the top of the repository (ie. one directory above `news/`):
     $ awestruct -d --force
     [ browse to http://localhost:4242 and check you post ]
 
-Once you are happy with your new post you can submit it back into Github where it will be deployed
-the next time the website is updated:
+Once you are happy with your new post you can submit it back into Github (after I've added you
+as a collaborator) where it will be deployed the next time the website is updated:
 
     $ git commit -a
     [ add a short description of the change, e.g. "add news about ___" ]
@@ -83,3 +83,9 @@ the next time the website is updated:
 
 After this is complete I will receive an email notifying me of the commit and I will endevour to
 deploy your change to the server as soon as possible.
+
+### Getting added as a Collaborator
+
+Simply send me an email (`scottw at gmail dot com`) requesting to be a collaborator and tell me what
+your [Github](http://github.com) username is. You can of course fork the Dereel project and submit
+your changes to your owb fork and then send me an email to merge them.
