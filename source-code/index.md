@@ -29,7 +29,22 @@ The entire source code for this website is available at: [github.com/scottweston
     $ awestruct -d --force
 
 Now browse to [http://localhost:4242](http://localhost:4242) to view the
-development site.
+development site. If you're running awestruct on a remote host you can add
+`--url http://a.b.c.d:4242` to the launch of the development server and
+then browse to that address once the server has started. For example if you
+are using a server on your local network to run awestruct but are ssh'd in
+from a laptop you could start awestruct like follows:
+
+    $ awestruct -d --force --url http://192.168.1.200:4242
+
+And then browse to [http://192.168.1.200:4242](http://192.168.1.200:4242) to
+see the site. There is still an outstanding bug in awestruct v0.5.0 where it will
+output: 
+
+    Generating site: http://localhost:4242
+
+even when you supply a different URL, simply ignore it - it will use the
+correct base_url.
 
 You need Ruby1.9 or greated because the `Atomizer` extension requires
 `Datetime.xmlschema()` which was introduced in Ruby1.9. If you must
