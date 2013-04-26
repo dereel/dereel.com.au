@@ -88,4 +88,4 @@ deploy your change to the server as soon as possible.
 
 Simply send me an email (`scottw at gmail dot com`) requesting to be a collaborator and tell me what
 your [Github](http://github.com) username is. You can of course fork the Dereel project and submit
-your changes to your owb fork and then send me an email to merge them.
+your changes to your own fork and then send me an email to merge them.
