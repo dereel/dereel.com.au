@@ -4,9 +4,9 @@
   %header.header
     %h2.title
       %a{:href=>page.post.url}= page.post.title
-  .body
+  .body.clearfix
     ~ page.post.content
-  .footer.clearfix
+  .footer
     %span.author
       Posted by
       = page.post.author
