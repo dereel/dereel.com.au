@@ -6,7 +6,7 @@
       %a{:href=>page.post.url}= page.post.title
   .body
     ~ page.post.content
-  .footer{:style=>"clear:both;"}
+  .footer.clearfix
     %span.author
       Posted by
       = page.post.author
