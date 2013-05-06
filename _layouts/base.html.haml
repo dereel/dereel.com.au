@@ -8,33 +8,37 @@
       body {
         padding-top: 60px;
       }
-    %link(rel='shortcut icon' type="image/png" href="#{site.base_url}/images/favicon.png")
-    %link(rel='apple-touch-icon' type="image/png" href="#{site.base_url}/images/favicon.png")
+    %link(rel='shortcut icon' type="image/png" href="/images/favicon.png")
+    %link(rel='apple-touch-icon' type="image/png" href="/images/favicon.png")
     %link(rel='alternate' type='application/atom+xml' href='/news/atom.xml' title='dereel.com.au &raquo; Feed')
-    %link(rel='stylesheet' type='text/css' href="#{site.base_url}/stylesheets/styles.css")
+    %link(rel='stylesheet' type='text/css' href="/stylesheets/styles.css")
     /[if lt IE 9]
       %script{ :type=>'text/javascript', :src=>'//html5shim.googlecode.com/svn/trunk/html5.js' }
   %body
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
-          %a.brand{ :href=>"#{site.base_url}" } #{site.short_name}
+          %a.brand{ :href=>"/" } #{site.short_name}
           %ul.nav
             %li{:class=>('active' if page.url =~ /^\/news\//)}<
-              %a{ :href=>"#{site.base_url}/news/" } News
+              %a{ :href=>"/news/" } News
             %li{:class=>('active' if page.url =~ /^\/about\//)}<
-              %a{ :href=>"#{site.base_url}/about/" } About Dereel
+              %a{ :href=>"/about/" } About Dereel
             %li{:class=>('active' if page.url =~ /^\/community-information\//)}<
-              %a{ :href=>"#{site.base_url}/community-information/" } Community Information
+              %a{ :href=>"/community-information/" } Community Information
             %li{:class=>('active' if page.url =~ /^\/town-hall\//)}<
-              %a{ :href=>"#{site.base_url}/town-hall/" } Town Hall &amp; Community Centre
+              %a{ :href=>"/town-hall/" } Town Hall &amp; Community Centre
             %li{:class=>('active' if page.url =~ /^\/source-code\//)}<
-              %a{ :href=>"#{site.base_url}/source-code/" } Source Code
+              %a{ :href=>"/source-code/" } Source Code
     .container
       .hero-unit{:style=>'background: url(\'/images/dereel-bg.png\') no-repeat 50% 50%;'}
         %h1 
           %a{:href=>"/"}= site.title
         %p #{site.tagline}
+        %p
+          %a.btn.btn-success.btn-large{ :href=>"/about" }
+            %i.icon-info-sign.icon-white
+            About Dereel &raquo;
 
       .row-fluid
         .span7.offset1
@@ -67,7 +71,7 @@
             &copy; dereel.com.au #{Date.today.year}
 
     %script{ :type=>'text/javascript', :src=>'//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js' }
-    %script{ :type=>'text/javascript', :src=>"#{site.base_url}/javascripts/bootstrap-collapse.js" }
-    %script{ :type=>'text/javascript', :src=>"#{site.base_url}/javascripts/bootstrap-tab.js" }
+    %script{ :type=>'text/javascript', :src=>"/javascripts/bootstrap-collapse.js" }
+    %script{ :type=>'text/javascript', :src=>"/javascripts/bootstrap-tab.js" }
     - if site.google_analytics
       = google_analytics_async
