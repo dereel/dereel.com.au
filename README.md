@@ -22,6 +22,6 @@ How to get up and running
 
 3. Bake the development site: 
 
-        $ awestruct -d --force
+        $ cd dereel && awestruct -d --force
 
 4. Add your own content (check [the Dereel website](http://dereel.com.au/source-code/) for instructions)
