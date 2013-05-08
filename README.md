@@ -18,7 +18,7 @@ How to get up and running
 
 2. Clone the code:
 
-        $ git clone http://githib.com/scottweston/dereel.git
+        $ git clone https://github.com/scottweston/dereel.git
 
 3. Bake the development site: 
 
