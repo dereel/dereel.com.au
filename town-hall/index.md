@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Town Hall &amp; Community Centre
+allow_comments: true
 ---
 
 ## #{page.title}

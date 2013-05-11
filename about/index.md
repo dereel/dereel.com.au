@@ -1,6 +1,7 @@
 ---
 layout: base
 title: About Dereel
+allow_comments: true
 ---
 
 ## #{page.title}

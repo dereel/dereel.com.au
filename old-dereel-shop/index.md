@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Old Dereel Shop
+allow_comments: true
 ---
 
 ## #{page.title}

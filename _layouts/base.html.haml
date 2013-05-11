@@ -44,21 +44,29 @@
         .span7.offset1
           ~ content
 
+          - if page.allow_comments
+            #comments
+            - if site.disqus
+              = page.disqus_comments
+
         .span3.offset1
+          - if site.information
+            %h4 Information
+            %ul
+              - site.information.sort_by(&:title).each do |info|
+                %li
+                  %a{:href=>info.url}= info.title
+
+          %hr
           .recentcomments.dsq-widget
             %h4.dsq-widget-title Recent Comments
             %script{ :type=>'text/javascript', :src=>'http://dereel.disqus.com/recent_comments_widget.js?num_items=7&hide_avatars=1&avatar_size=32&excerpt_length=100' }
             
-          - if site.information
-            %h4 Information
-            %ul
-              - for info in site.information
-                %li
-                  %a{:href=>info.url}= info.title
+          %hr
           - if site.links
             %h4 Local Links
             %ul
-              - for link in site.links
+              - site.links.sort_by(&:title).each do |link|
                 %li
                   %a{:href=>link.url}= link.title
       %hr

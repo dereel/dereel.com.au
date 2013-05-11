@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Community Information
+allow_comments: true
 ---
 
 ## #{page.title}
