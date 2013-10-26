@@ -10,3 +10,5 @@ some time before we'll be able to sign up for NBN service (the equipment
 building still isn't on site for example) but I think the estimate NBNco
 initially offered us is still viable: **NBN service by the end of the year**.
 This will certainly make a good Christmas present for Dereel residents.
+
+![Dereel NBN tower erected](/images/dereel-tower-oct-2013.jpg)
