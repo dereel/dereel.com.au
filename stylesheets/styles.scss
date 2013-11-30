@@ -1,13 +1,11 @@
-// I gather this file is a starting point for the project.
 @import "bootstrap";
-
-// Include responsive Bootstrap styles
-@import "bootstrap-responsive";
 
 .alignleft {  float: left;  padding: 12px; }
 .alignright {  float: right;  padding: 12px; }
 .byline { text-align: right; font-size: 80%; padding-bottom: 25px; }
 .post > .footer { text-align: right; padding-top: 25px; font-size: 80%; }
 footer { text-align: right; }
-.hero-unit { border: dashed gold 10px; }
+.jumbotron { border: dashed gold 10px; }
 .recentcomments { font-size: 85%; }
+
+img { display: block; height: auto; max-width: 100%; }

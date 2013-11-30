@@ -6,7 +6,7 @@
     %meta{ :name=>'viewport', :content=>'width=device-width, initial-scale=1.0' }
     :css
       body {
-        padding-top: 60px;
+        padding-top: 80px;
       }
     %link(rel='shortcut icon' type="image/png" href="/images/favicon.png")
     %link(rel='apple-touch-icon' type="image/png" href="/images/favicon.png")
@@ -15,33 +15,38 @@
     /[if lt IE 9]
       %script{ :type=>'text/javascript', :src=>'//html5shim.googlecode.com/svn/trunk/html5.js' }
   %body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          %a.brand{ :href=>"/" } #{site.short_name}
-          %ul.nav
-            %li{:class=>('active' if page.url =~ /^\/news\//)}<
-              %a{ :href=>"/news/" } News
-            %li{:class=>('active' if page.url =~ /^\/about\//)}<
-              %a{ :href=>"/about/" } About Dereel
-            %li{:class=>('active' if page.url =~ /^\/community-information\//)}<
-              %a{ :href=>"/community-information/" } Community Information
-            %li{:class=>('active' if page.url =~ /^\/town-hall\//)}<
-              %a{ :href=>"/town-hall/" } Town Hall &amp; Community Centre
-            %li{:class=>('active' if page.url =~ /^\/source-code\//)}<
-              %a{ :href=>"/source-code/" } Source Code
+    %nav.navbar.navbar-default.navbar-fixed-top{:role => "navigation"}
+      .navbar-header
+        %a.navbar-brand{ :href=>"/" } #{site.short_name}
+        %button.navbar-toggle{:type => "button", "data-toggle" => "collapse", "data-target" => ".navbar-collapse"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+      .navbar-collapse.collapse
+        %ul.nav.navbar-nav
+          %li{:class=>('active' if page.url =~ /^\/news\//)}<
+            %a{ :href=>"/news/" } News
+          %li{:class=>('active' if page.url =~ /^\/about\//)}<
+            %a{ :href=>"/about/" } About Dereel
+          %li{:class=>('active' if page.url =~ /^\/community-information\//)}<
+            %a{ :href=>"/community-information/" } Community Information
+          %li{:class=>('active' if page.url =~ /^\/town-hall\//)}<
+            %a{ :href=>"/town-hall/" } Town Hall &amp; Community Centre
+          %li{:class=>('active' if page.url =~ /^\/source-code\//)}<
+            %a{ :href=>"/source-code/" } Source Code
     .container
-      .hero-unit{:style=>'background: url(\'/images/dereel-bg.png\') no-repeat 50% 50%;'}
+      .jumbotron{:style=>'background: url(\'/images/dereel-bg.png\') no-repeat 50% 50%;'}
         %h1 
           %a{:href=>"/"}= site.title
         %p #{site.tagline}
         %p
           %a.btn.btn-success.btn-large{ :href=>"/about" }
-            %i.icon-info-sign.icon-white
+            %i.glyphicon.glyphicon-info-sign.glyphicon-white
             About Dereel &raquo;
 
-      .row-fluid
-        .span7.offset1
+      .row
+        .col-md-7.col-md-offset-1
           ~ content
 
           - if page.allow_comments
@@ -49,7 +54,7 @@
             - if site.disqus
               = page.disqus_comments
 
-        .span3.offset1
+        .col-md-3.col-md-offset-1
           - if site.information
             %h4 Information
             %ul
@@ -73,13 +78,14 @@
       %footer
         %p
           %small
-            %i.icon-wrench
+            %i.glyphicon.glyphicon-wrench
             %a{:href=>"https://github.com/scottweston/dereel/issues/new?title=Bug+found+on+#{page.url}"} Submit a bug for this page
             |
             &copy; dereel.com.au #{Date.today.year}
 
-    %script{ :type=>'text/javascript', :src=>'//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js' }
-    %script{ :type=>'text/javascript', :src=>"/javascripts/bootstrap-collapse.js" }
-    %script{ :type=>'text/javascript', :src=>"/javascripts/bootstrap-tab.js" }
+    %script{ :type=>'text/javascript', :src=>"//codeorigin.jquery.com/jquery-1.10.2.min.js" }
+    %script{ :type=>'text/javascript', :src=>"//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js" }
+    %script{ :type=>'text/javascript', :src=>"/javascripts/bootstrap/collapse.js" }
+    %script{ :type=>'text/javascript', :src=>"/javascripts/bootstrap/tab.js" }
     - if site.google_analytics
       = google_analytics_async
