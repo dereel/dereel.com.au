@@ -31,7 +31,7 @@ blockquote {
 
 blockquote p {
   color: rgba(0,0,0,0.5);
-  font-size: 15px;
+  font-size: $font-size-base - 1;
 }
 
 blockquote:before {
