@@ -1,16 +1,14 @@
 ---
 layout: base
 ---
-
 - if site.posts
-  - for post in site.posts[0..2]
+  %h2 Recent News
+  - for post in site.posts[0..9]
     %article.post
       %header.header
-        %h2.title
+        %h4.title
           %a{:href=>post.url}= post.title
-      .body
-        ~ post.content
-      .footer{:style=>"clear:both;"}
+      .footer{:style=>"clear:both; text-align:left; padding-bottom:15px; padding-top:0px;"}
         %span.author
           Posted by
           %i.fa.fa-user
@@ -31,6 +29,12 @@ layout: base
           = post.disqus_comments_count
 
 %p{:style=>"padding-top: 20px;"}
-  %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/news/" }
+  %a.btn.btn-primary{ :href=>"#{site.base_url}/news/" }
     More News
     %i.fa.fa-chevron-right.fa-lg
+
+:markdown
+  ## Adding content
+
+  If you have content you want added to this site please email it to: `scott@dereel.com.au`
+
