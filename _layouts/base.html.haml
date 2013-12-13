@@ -38,6 +38,9 @@
               %a{ :href=>"/town-hall/" } Town Hall &amp; Community Centre
             %li{:class=>('active' if page.url =~ /^\/source-code\//)}<
               %a{ :href=>"/source-code/" } Source Code
+            %li
+              %a{ :href=>"/news/atom.xml", :title=>"rss feed" }
+                %i.fa.fa-rss-square.fa-lg
     %section{:id => "megatron", "data-speed" => "3", "data-type" => "background"}
       .jumbotron
         .container
