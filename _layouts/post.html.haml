@@ -4,7 +4,11 @@ layout: base
 = partial('post.html.haml', :parent => page, :post => page, :include_comments => true)
 %ul.pager
   %li.previous{:class=>('disabled' unless page.previous_post)}
-    %a{:href=>page.previous_post ? page.previous_post.url : '#'} &laquo; Previous
+    %a{:href=>page.previous_post ? page.previous_post.url : '#'}
+      %i.fa.fa-arrow-left
+      Previous
   %li.pages Post #{site.posts.size - site.posts.index(page)} of #{site.posts.size}
   %li.next{:class=>('disabled' unless page.next_post)}
-    %a{:href=>page.next_post ? page.next_post.url : '#'} Next &raquo;
+    %a{:href=>page.next_post ? page.next_post.url : '#'}
+      Next
+      %i.fa.fa-arrow-right

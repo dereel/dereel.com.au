@@ -9,16 +9,20 @@
   .footer
     %span.author
       Posted by
+      %i.fa.fa-user
       = page.post.author
-    %span.dateinline on #{page.post.date.strftime('%b %d, %Y')}
+    %span.dateinline
+      on
+      %i.fa.fa-calendar
+      #{page.post.date.strftime('%b %d, %Y')}
     %span.permalink
       |
-      %i.icon-tag
+      %i.fa.fa-link
       %a{:href=>page.post.url} permalink
     - if site.disqus
       %span.comments
         |
-        %i.icon-comment
+        %i.fa.fa-comments
         #{page.post.disqus_comments_link}
   %hr
   - if page.include_comments

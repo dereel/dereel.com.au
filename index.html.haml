@@ -13,20 +13,24 @@ layout: base
       .footer{:style=>"clear:both;"}
         %span.author
           Posted by
+          %i.fa.fa-user
           = post.author
-        %span.dateinline on #{post.date.strftime('%b %d, %Y')}
+        %span.dateinline
+          on
+          %i.fa.fa-calendar
+          #{post.date.strftime('%b %d, %Y')}
         %span.permalink
           |
-          %i.icon-tag
+          %i.fa.fa-link
           %a{:href=>post.url} permalink
         - if site.disqus
           %span.comments
             |
-            %i.icon-comment
+            %i.fa.fa-comments
             #{post.disqus_comments_link}
           = post.disqus_comments_count
 
 %p{:style=>"padding-top: 20px;"}
-  %a.btn.btn-primary.btn-large{ :href=>"#{site.base_url}/news/" }
-    %i.glyphicon.glyphicon-info-sign.glyphicon-white
-    More News &raquo;
+  %a.btn.btn-primary.btn-lg{ :href=>"#{site.base_url}/news/" }
+    More News
+    %i.fa.fa-chevron-right.fa-lg
