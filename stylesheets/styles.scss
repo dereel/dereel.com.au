@@ -1,3 +1,4 @@
+@import "variables";
 @import "bootstrap";
 
 .alignleft {  float: left;  padding: 12px; }
@@ -37,3 +38,4 @@ blockquote:before {
   padding-right: 14px;
 }
 
+p { font-weight: 300; }

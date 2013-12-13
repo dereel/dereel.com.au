@@ -12,6 +12,7 @@
     %link(rel='apple-touch-icon' type="image/png" href="/images/favicon.png")
     %link(rel='alternate' type='application/atom+xml' href='/news/atom.xml' title='dereel.com.au &raquo; Feed')
     %link(rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
+    %link(rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700')
     %link(rel='stylesheet' type='text/css' href="/stylesheets/styles.css")
     /[if lt IE 9]
       %script{ :type=>'text/javascript', :src=>'//html5shim.googlecode.com/svn/trunk/html5.js' }
@@ -51,7 +52,7 @@
 
     .container
       .row
-        .col-md-7.col-md-offset-1
+        .col-md-8
           ~ content
 
           - if page.allow_comments
@@ -59,7 +60,7 @@
             - if site.disqus
               = page.disqus_comments
 
-        .col-md-3.col-md-offset-1
+        .col-md-4
           - if site.information
             %h4 Information
             %ul
