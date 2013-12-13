@@ -22,6 +22,16 @@ of the Colac-Ballarat road and Dereel-Rokewood Junction road.
 Dereel includes a large wetlands area, referred to as the "Swamp" or "Lagoon".
 During the 1930's this swamp area was used as a race course.
 
+![Dereel School Children, 1930s](/images/dereel-school-children.jpg "Dereel School Children, 1930's")
+
+![Dereel State School, 1930s](/images/dereel-state-school.jpg "Dereel State School, 1930's")
+
+![Dereel Church, 1920s](/images/dereel-church.jpg "Dereel Church, 1920's")
+
+![Dereel Swamp, 1935](/images/dereel-swamp.jpg "Dereel Swamp, 1935")
+
+![Dereel Two Men on carriage, 1925](/images/dereel-two-men.jpg "Dereel Two Men on carriage, 1925")
+
 ![Dereel Racecourse, 1930s](/images/dereel-racecourse-1930s.jpg "Dereel Racecourse, 1930's")
 
 ![Dereel Hall Dinner, 1915](/images/dereel-hall-dinner-1915.jpg "Dereel Hall Dinner, 1915")

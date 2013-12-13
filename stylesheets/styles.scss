@@ -11,7 +11,7 @@ footer { text-align: right; }
 img { display: block; height: auto; max-width: 100%; }
 
 #megatron {
-  background: url(/images/dereel-bg.png);
+  background: url(/images/dereel-school-children.jpg);
   background-position-x: 50%;
   background-position-y: -190px;
   background-size: 130%;
@@ -20,10 +20,10 @@ img { display: block; height: auto; max-width: 100%; }
   margin: 0 auto;
   width: 100%;
   position: relative;
-  box-shadow: 0 10px 10px -10px rgba(0,0,0,0.8) inset, 0 -10px 10px -10px rgba(0,0,0,0.8) inset;
+  box-shadow: 0 10px 10px -10px black inset, 0 -10px 10px -10px black inset;
 }
 
-.jumbotron { background-color: transparent; }
+.jumbotron { background-color: rgba(255,255,255,0.8); }
 
 blockquote {
   border: none;
