@@ -9,7 +9,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
       // HTML5 proves useful for helping with creating JS functions!
       // also, negative value because we're scrolling upwards
-      var yPos = -150 - ($window.scrollTop() / $scroll.data('speed'));
+      var yPos = -190 - ($window.scrollTop() / $scroll.data('speed'));
 
       // background position
       var coords = '50% '+ yPos + 'px';
