@@ -16,4 +16,6 @@ To make an offer, reply to this email with the offer you would like me to presen
 </blockquote>
 
 So it appears DATA were sitting on a little gold mine! Shame they abandoned it so quickly after
-losing their fight.
+losing their fight. Of course now that DATA have shuttered their website it's difficult
+to get updates about them so if you have any news on what DATA is up to these days please post it
+below in the comments - I'm sure we're all very interested. Lets hope they join twitter one day.
