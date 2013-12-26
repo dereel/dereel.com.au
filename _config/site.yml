@@ -13,6 +13,6 @@ profiles:
     disqus: dereel
     minify: true
     deploy:
-      host: wp01.westonwire.com.au
-      path: /var/www/dereel.com.au/html/
+      host: bird.westonwire.com.au
+      path: /srv/dereel.com.au/html/
       uncommitted: true
