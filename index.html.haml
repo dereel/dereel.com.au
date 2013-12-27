@@ -2,39 +2,48 @@
 layout: base
 ---
 - if site.posts
-  %h2 Recent News
-  - for post in site.posts[0..9]
-    %article.post
-      %header.header
-        %h4.title
-          %a{:href=>post.url}= post.title
-      .footer{:style=>"clear:both; text-align:left; padding-bottom:15px; padding-top:0px;"}
-        %span.author
-          Posted by
-          %i.fa.fa-user
-          = post.author
-        %span.dateinline
-          on
-          %i.fa.fa-calendar
-          #{post.date.strftime('%b %d, %Y')}
-        %span.permalink
-          |
-          %i.fa.fa-link
-          %a{:href=>post.url} permalink
-        - if site.disqus
-          %span.comments
-            |
-            %i.fa.fa-comments
-            #{post.disqus_comments_link}
-          = post.disqus_comments_count
+  .panel.panel-default
+    .panel-heading
+      %h4
+        %i.fa.fa-comments.fa-lg
+        Last news posts
+    %ul.list-group
+      - for post in site.posts[0..9]
+        %li.list-group-item
+          %article.post
+            %header.header
+              %h4.title
+                %a{:href=>post.url}= post.title
+            .footer{:style=>"clear:both; text-align:left; padding-bottom:15px; padding-top:0px;"}
+              %span.author
+                Posted by
+                %i.fa.fa-user
+                = post.author
+              %span.dateinline
+                on
+                %i.fa.fa-calendar
+                #{post.date.strftime('%b %d, %Y')}
+              %span.permalink
+                |
+                %i.fa.fa-link
+                %a{:href=>post.url} permalink
+              - if site.disqus
+                %span.comments
+                  |
+                  %i.fa.fa-comments
+                  #{post.disqus_comments_link}
+                = post.disqus_comments_count
+    .panel-footer
+      %p{:style=>"text-align:right;"}
+        %a.btn.btn-primary{ :href=>"/news/" }
+          More News
+          %i.fa.fa-chevron-right.fa-lg
 
-%p{:style=>"padding-top: 20px;"}
-  %a.btn.btn-primary{ :href=>"#{site.base_url}/news/" }
-    More News
-    %i.fa.fa-chevron-right.fa-lg
 
-:markdown
-  ## Adding content
-
-  If you have content you want added to this site please email it to: `scott@dereel.com.au`
-
+.panel.panel-success
+  .panel-heading
+    %h4
+      %i.fa.fa-exclamation-circle.fa-lg
+      Adding Content
+  .panel-body
+    If you have content you want added to this site please email it to: <code>scott@dereel.com.au</code>
