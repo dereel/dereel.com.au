@@ -26,7 +26,5 @@ allow_comments: true
         - 2nd Tuesday of the month at 9:00am in alternating location between Linton and Bannockburn (ring and check the day before).
     - *Full Council Meetings:*
         - 4th Tuesday of the month at 4:00pm in alternating location between Linton and Bannockburn (ring and check the day before).
-    - *Dereel Soldiers Memorial Hall and Recreation Committee:*
-        - 1st Tuesday of the  month in the Dereel community centre, contact Shaan Brigs on 5220 7190 for further details.
 
 
