@@ -9,7 +9,8 @@ profiles:
   production:
     short_name: Home
     base_url: http://dereel.com.au
-    google_analytics: UA-17125325-2
+    google_analytics:
+      account: UA-17125325-2
     disqus: dereel
     minify: true
     deploy:
