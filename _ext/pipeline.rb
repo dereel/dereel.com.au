@@ -6,7 +6,7 @@ Awestruct::Extensions::Pipeline.new do
 #  extension Awestruct::Extensions::Indexifier.new
   extension Awestruct::Extensions::Atomizer.new(:posts, '/news/atom.xml', :feed_title=>'dereel.com.au')
   extension Awestruct::Extensions::Disqus.new
-  transformer Awestruct::Extensions::Minify.new([:js])
+#  transformer Awestruct::Extensions::Minify.new([:js])
   helper Awestruct::Extensions::GoogleAnalytics
   helper Awestruct::Extensions::Partial
 end
