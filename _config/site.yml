@@ -1,6 +1,7 @@
 title: Dereel
 tagline: Dereel's Community Website
 author: Dereel Community Project
+:interpolate: true
 profiles:
   development:
     short_name: Dev
