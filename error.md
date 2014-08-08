@@ -12,5 +12,5 @@ some content may no longer be at the same place it was.
 
 Sorry about that.
 
-Feel free to [submit a bug](https://github.com/scottweston/dereel/issues/new?title=Missing+content)
+Feel free to [submit a bug](https://github.com/dereel/dereel.com.au/issues/new?title=Missing+content)
 and let us know what is missing/broken and we'll try and get it back again.

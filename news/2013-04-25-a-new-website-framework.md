@@ -21,5 +21,5 @@ I have done my best to ensure that URLs remain consistent between the old Wordpr
 and new layout but if you find any 404's please let me know (comment on this news post).
 
 If you find a bug in the website please [lodge it as an
-issue](https://github.com/scottweston/dereel/issues) against the Github
+issue](https://github.com/dereel/dereel.com.au/issues) against the Github
 project.
