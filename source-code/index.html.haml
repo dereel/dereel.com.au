@@ -14,96 +14,24 @@ title: Source Code
 :markdown
   ## #{page.title}
 
-  The entire source code for this website is available at: [github.com/scottweston/dereel](http://github.com/scottweston/dereel)
+  The entire source code for this website is available at: [github.com/dereel/dereel.com.au](http://github.com/dereel/dereel.com.au)
 
   ### How to checkout and run your own development version of this website
 
-  1. Install [awestruct](http://awestruct.org/)
-      * Ensure you enable support for `textile` and `md`
+  1. Install [rvm](http://rvm.io/)
   1. Checkout the dereel website from github:
-     `$ git clone https://github.com/scottweston/dereel.git`
+     `$ git clone https://github.com/dereel/dereel.com.au.git`
+  1. Move into the repo
+     `$ cd dereel.com.au`
+  1. Update the rvm environment by following any instructions [rvm](http://rvm.io/) tells you (e.g. installing `ruby`)
+  1. Update the gems
+     `$ rake update`
   1. Run a development instance of the website on your system:
-     `$ awestruct -d --force`
+     `$ rake`
 
-  ### Example installs of awestruct
-
-#row.content
-  .tabbable
-    %ul.nav.nav-tabs
-      %li.active
-        %a(href='#deb6'){:data=>{:toggle=>'tab'}} Debian 6.0.x
-      %li
-        %a(href='#ubuntu12'){:data=>{:toggle=>'tab'}} Ubuntu 12.x
-      %li
-        %a(href='#ubuntu13'){:data=>{:toggle=>'tab'}} Ubuntu 13.x
-    .tab-content
-      .tab-pane.fade.in.active#deb6
-        %pre
-          = preserve do
-            :escaped
-              $ sudo apt-get install ruby1.9.1 ruby1.9.1-dev rubygems libxml2-dev libxslt-dev rake git
-              $ sudo ln -sf ruby1.9.1 /usr/bin/ruby
-              $ sudo ln -sf gem1.9.1 /usr/bin/gem
-              $ sudo gem install htmlcompressor coffee-script uglifier therubyracer RedCloth redcarpet rb-inotify
-              $ sudo gem install awestruct
-                [ add /var/lib/gems/1.9.1/bin to your path based on your shell ]
-              $ git clone https://github.com/scottweston/dereel.git
-              $ cd dereel
-              $ awestruct -d --force
-      .tab-pane.fade#ubuntu12
-        %pre
-          = preserve do
-            :escaped
-              $ sudo apt-get install ruby1.9.1 ruby1.9.1-dev rubygems libxml2-dev libxslt-dev rake git
-              $ sudo update-alternatives --config ruby
-                [ select ruby1.9.1]
-              $ sudo update-alternatives --config gem
-                [ select gem.9.1]
-              $ sudo gem install htmlcompressor coffee-script uglifier therubyracer RedCloth redcarpet rb-inotify
-              $ sudo gem install awestruct
-              $ git clone https://github.com/scottweston/dereel.git
-              $ cd dereel
-              $ awestruct -d --force
-      .tab-pane.fade#ubuntu13
-        %pre
-          = preserve do
-            :escaped
-              $ sudo apt-get install ruby1.9.1 ruby1.9.1-dev rubygems libxml2-dev libxslt-dev rake git
-              $ sudo gem install htmlcompressor coffee-script uglifier therubyracer RedCloth redcarpet rb-inotify
-              $ sudo gem install awestruct
-              $ git clone https://github.com/scottweston/dereel.git
-              $ cd dereel
-              $ awestruct -d --force
-
-:markdown
   Now browse to [http://localhost:4242](http://localhost:4242) to view the
-  development site. If you're running awestruct on a remote host you can add
-  `--url http://a.b.c.d:4242` to the launch of the development server and then
-  browse to that address once the server has started. For example if you are
-  using a server on your local network to run awestruct but are ssh'd in from a
-  laptop you could start awestruct like follows:
-
-      $ awestruct -d --force --url http://192.168.1.200:4242
-
-  And then browse to [http://192.168.1.200:4242](http://192.168.1.200:4242) to
-  see the site. There is still an outstanding bug in awestruct v0.5.0 where it
-  will output: 
-
-      Generating site: http://localhost:4242
-
-  even when you supply a different URL, simply ignore it - it will use the
-  correct base_url.
-
-  You need Ruby1.9 or greated because the `Atomizer` extension requires
-  `Datetime.xmlschema()` which was introduced in Ruby1.9. If you must run on
-  Ruby1.8 then you will need to disable the Atomizer by commenting the
-  following line in `_ext/pipeline.rb`:
-
-      extension Awestruct::Extensions::Atomizer.new(:posts, '/news/atom.xml', :feed_title=>'dereel.com.au')
-
-  If you do not comment out the `Atomizer` you will get the following error:
-
-      NoMethodError: undefined method `xmlschema' for DateTime:Class
+  development site or replace `localhost` with the address (IP or hostname)
+  of your development server.
 
   ### How to submit content
 
@@ -138,7 +66,7 @@ title: Source Code
   directory above `news/`):
 
       $ cd ..
-      $ awestruct -d --force
+      $ rake clean && rake
         [ browse to http://localhost:4242 and check you post ]
 
   Once you are happy with your new post you can submit it back into Github
