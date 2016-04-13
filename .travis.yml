@@ -2,5 +2,5 @@ language: ruby
 rvm:
 - 2.1
 before_script:
-- echo -e "Host dereel.com.au\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- echo -e "Host dereel.com.au\n\tStrictHostKeyChecking no\n\tUser dereel\n" >> ~/.ssh/config
 script: rake deploy
