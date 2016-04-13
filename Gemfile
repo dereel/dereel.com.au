@@ -1,20 +1,20 @@
 # This file is a Bundler dependency descriptor file. Its purpose is to list all of
-# the dependencies you are using to build your site. It is highly recommended you use 
+# the dependencies you are using to build your site. It is highly recommended you use
 # this to keep your dependencies up to date and not cause conflicts with other gems
-# already on your system. 
+# already on your system.
 #
 # If you do not already have Bundler installed on your computer, run:
 #
 #  gem install bundler
 #
 # To use this dependecy file simply run:
-# 
+#
 #  bundle install
 #
 # We do recommend that you install the gems into another directory however, to ensure
 # your awestruct site is pristine and isn't using versions of gems from other programs.
 # To do this execute:
-# 
+#
 #  bundle install --path .bundle
 #
 # More information about Bundler and its other commands can be found at http://gembundler.com/.
@@ -42,3 +42,4 @@ gem 'kramdown', '>= 0.14.2'                             # If using Markdown
 gem 'uglifier', '>= 1.3.0'                              # If using the minify transformer
 gem 'htmlcompressor', '>= 0.0.3'                        # If using the minify transformer
 gem 'haml-contrib', '>= 0'
+gem 'bootstrap-sass'

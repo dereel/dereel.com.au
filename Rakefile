@@ -89,7 +89,7 @@ end
 
 desc 'Build and preview the site locally in development mode'
 task :preview => :check do
-  run_awestruct '-d'
+  run_awestruct '-d -b 0.0.0.0'
 end
 
 # provide a serve task for those used to Jekyll commands
