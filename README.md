@@ -1,4 +1,4 @@
-# Dereel Community Wesbite
+# Dereel Community Wesbite [![Build Status](https://travis-ci.org/dereel/dereel.com.au.svg?branch=master)](https://travis-ci.org/dereel/dereel.com.au)
 
 Moving from Wordpress because Wordpress is a massive pain.
 
@@ -18,7 +18,7 @@ Environment: [rvm](http://rvm.io)
 
         $ cd dereel.com.au
         $ rake update
-        
+
 4. Start the development server
 
         $ rake
