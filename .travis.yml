@@ -1,6 +1,10 @@
 language: ruby
 rvm:
-- 2.1
+  - 2.1
+addons:
+  apt:
+    packages:
+      - sshpass
 before_script:
-- echo -e "Host dereel.com.au\n\tStrictHostKeyChecking no\n\tUser dereel\n" >> ~/.ssh/config
-script: rake deploy
+  - echo -e "Host dereel.com.au\n\tStrictHostKeyChecking no\n\tUser dereel\n" >> ~/.ssh/config
+script: sshpass -e rake deploy
