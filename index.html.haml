@@ -1,7 +1,26 @@
 ---
 layout: base
 ---
-- if site.posts
+
+%section
+  :markdown
+    **Dereel** is an old gold mining town in the Western District of the Australian
+    state of Victoria.  At the 2011 census Dereel and the surrounding area had a
+    population of 586 down from the 2006 population of 669. Dereel includes the area
+    to the west known as Mount Mercer.
+
+    It is located on the Ballarat-Colac Road, 33 kilometres south of Ballarat and
+    70 kilometres north of Colac. There is no clearly defined town centre, though
+    the Dereel Soldiers' Memorial Hall, located on Swamp Road, is commonly
+    considered as the town centre.
+
+    The Dereel Post Office opened on 1 November 1868 and closed in 1971 and was located at the corner
+    of the Colac-Ballarat road and Dereel-Rokewood Junction road.
+
+    Dereel includes a large wetlands area, referred to as the "Swamp" or "Lagoon".
+    During the 1930's this swamp area was used as a race course.
+
+- if site.posts and (Date.today - site.posts[0].date) < 60
   .panel.panel-default
     .panel-heading
       %h4
@@ -24,6 +43,7 @@ layout: base
                 on
                 %i.fa.fa-calendar
                 #{post.date.strftime('%b %d, %Y')}
+                (#{(Date.today - post.date).to_i} days ago)
               %span.permalink
                 |
                 %i.fa.fa-link
@@ -39,6 +59,12 @@ layout: base
         %a.btn.btn-primary{ :href=>"/news/" }
           More News
           %i.fa.fa-chevron-right.fa-lg
+- else
+  .panel.panel-default
+    .panel-heading
+      %h4
+        %i.fa.fa-comments.fa-lg
+        There is no recent news!
 
 
 .panel.panel-success
