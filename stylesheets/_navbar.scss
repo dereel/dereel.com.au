@@ -220,7 +220,14 @@
   .navbar-nav {
     width: 100%;
     display: flex;
-    justify-content: space-between; // space out brand from logo
+    justify-content: space-evenly; // space out brand from logo
+
+    .nav-item {
+      background: #e8e8e8;
+      padding: 5px 10px;
+      border: solid #ddd 1px;
+      border-radius: 5px;
+    }
 
     .nav-link {
       color: $navbar-light-color;

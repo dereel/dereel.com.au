@@ -9,12 +9,12 @@ profiles:
     disqus_developer: true
   production:
     short_name: Home
-    base_url: http://dereel.com.au
+    base_url: https://dereel.com.au
     google_analytics:
       account: UA-17125325-2
     disqus: dereel
     minify: true
     deploy:
       host: dereel.com.au
-      path: /srv/dereel.com.au/html/
+      path: /srv/dereel.com.au/htdocs/
       uncommitted: true
