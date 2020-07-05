@@ -1,3 +1,4 @@
+@import "functions";
 @import "variables";
 @import "bootstrap";
 @import "flexvideo";
@@ -32,7 +33,6 @@ blockquote {
 
 blockquote p {
   color: rgba(0,0,0,0.5);
-  font-size: $font-size-base - 1;
 }
 
 blockquote:before {

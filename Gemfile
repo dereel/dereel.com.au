@@ -31,7 +31,7 @@ gem 'coffee-script', '>= 2.2.0'                         # If using coffee-script
 gem 'rb-inotify', '>= 0.9.0', :require => false         # to remove warning about pulling, Linux
 # gem 'wdm', :platforms => [:mswin, :mingw], :require => false # to remove warning about pulling, Windows (ruby 1.9+)
 # gem 'rb-fchange', '~> 0.0.6', :require => false         # to remove warning about pulling, Windows (ruby 1.8.7)
-gem 'therubyracer', '0.10.0', :platforms => :ruby       # Javascript runtime on mri (needed for LESS and coffee-script)
+gem 'therubyracer', '0.12.3', :platforms => :ruby       # Javascript runtime on mri (needed for LESS and coffee-script)
 # gem 'therubyrhino', '~> 2.0.2', :platforms => :jruby    # Javascript runtime on jruby (needed for LESS and coffee-script)
 # gem 'less', '>= 2.2.2'                                  # If using LESS instead of sass 
 # gem 'org-ruby', '>= 0.8'                                # If using Org-Mode

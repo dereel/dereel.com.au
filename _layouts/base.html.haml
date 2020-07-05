@@ -11,6 +11,7 @@
       body {
         padding-top: 120px;
       }
+    %script{ :type=>'text/javascript', :src=>'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', :async => '', "data-ad-client" => "ca-pub-1034081480552496" }
     %link(rel='shortcut icon' type="image/png" href="/images/favicon.png")
     %link(rel='apple-touch-icon' type="image/png" href="/images/favicon.png")
     %link(rel='alternate' type='application/atom+xml' href='/news/atom.xml' title='dereel.com.au &raquo; Feed')
@@ -20,28 +21,25 @@
     /[if lt IE 9]
       %script{ :type=>'text/javascript', :src=>'//html5shim.googlecode.com/svn/trunk/html5.js' }
   %body
-    %nav.navbar.navbar-default.navbar-fixed-top{:role => "navigation"}
+    %nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top{:role => "navigation"}
       .container
         .navbar-header
           %a.navbar-brand{ :href=>"/" } #{site.short_name}
-          %button.navbar-toggle{:type => "button", "data-toggle" => "collapse", "data-target" => ".navbar-collapse"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
+          %button.navbar-toggler{:type => "button", "data-toggle" => "collapse", "data-target" => ".navbar-collapse"}
+            %span.navbar-toggler-icon
         .navbar-collapse.collapse
-          %ul.nav.navbar-nav
-            %li{:class=>('active' if page.url =~ /^\/news\//)}<
+          %ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+            %li.nav-item{:class=>('active' if page.url =~ /^\/news\//)}<
               %a{ :href=>"/news/" } News
-            %li{:class=>('active' if page.url =~ /^\/about\//)}<
+            %li.nav-item{:class=>('active' if page.url =~ /^\/about\//)}<
               %a{ :href=>"/about/" } About Dereel
-            %li{:class=>('active' if page.url =~ /^\/community-information\//)}<
+            %li.nav-item{:class=>('active' if page.url =~ /^\/community-information\//)}<
               %a{ :href=>"/community-information/" } Community Information
-            %li{:class=>('active' if page.url =~ /^\/town-hall\//)}<
+            %li.nav-item{:class=>('active' if page.url =~ /^\/town-hall\//)}<
               %a{ :href=>"/town-hall/" } Town Hall &amp; Community Centre
-            %li{:class=>('active' if page.url =~ /^\/source-code\//)}<
+            %li.nav-item{:class=>('active' if page.url =~ /^\/source-code\//)}<
               %a{ :href=>"/source-code/" } Source Code
-            %li
+            %li.nav-item
               %a{ :href=>"/news/atom.xml", :title=>"rss feed" }
                 %i.fa.fa-rss-square.fa-lg
     %section{:id => "megatron", "data-speed" => "3", "data-type" => "background"}
