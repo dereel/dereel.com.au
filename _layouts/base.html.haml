@@ -15,7 +15,7 @@
     %link(rel='shortcut icon' type="image/png" href="/images/favicon.png")
     %link(rel='apple-touch-icon' type="image/png" href="/images/favicon.png")
     %link(rel='alternate' type='application/atom+xml' href='/news/atom.xml' title='dereel.com.au &raquo; Feed')
-    %link(rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css')
+    %link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css' integrity='sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==' crossorigin='anonymous')
     %link(rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,700')
     %link(rel='stylesheet' type='text/css' href="/stylesheets/styles.css")
     /[if lt IE 9]
@@ -92,6 +92,7 @@
             %a{:href=>"https://github.com/dereel/dereel.com.au/issues/new?title=Bug+found+on+#{page.url}"} Submit a bug for this page
             |
             &copy; dereel.com.au #{Date.today.year}
+            %img{:src=>'/images/aws_amplify_icon.png'}
 
     %script{ :type=>'text/javascript', :src=>"//codeorigin.jquery.com/jquery-1.11.0.min.js" }
     %script{ :type=>'text/javascript', :src=>"//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js" }
