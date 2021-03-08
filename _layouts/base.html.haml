@@ -22,25 +22,25 @@
       %script{ :type=>'text/javascript', :src=>'//html5shim.googlecode.com/svn/trunk/html5.js' }
   %body
     %nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top{:role => "navigation"}
-      .container
-        .navbar-header
-          %a.navbar-brand{ :href=>"/" } #{site.short_name}
-          %button.navbar-toggler{:type => "button", "data-toggle" => "collapse", "data-target" => ".navbar-collapse"}
-            %span.navbar-toggler-icon
+      %a.navbar-brand{:href=>'#'}
+        #{site.short_name}
+      %button.navbar-toggler{:type => "button", "data-toggle" => "collapse", "data-target" => ".navbar-collapse"}
+        %span.navbar-toggler-icon
+      .collapse.navbar-collapse
         .navbar-collapse.collapse
-          %ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+          %ul.navbar-nav.mr-auto
             %li.nav-item{:class=>('active' if page.url =~ /^\/news\//)}<
-              %a{ :href=>"/news/" } News
+              %a.nav-link{ :href=>"/news/" } News
             %li.nav-item{:class=>('active' if page.url =~ /^\/about\//)}<
-              %a{ :href=>"/about/" } About Dereel
+              %a.nav-link{ :href=>"/about/" } About Dereel
             %li.nav-item{:class=>('active' if page.url =~ /^\/community-information\//)}<
-              %a{ :href=>"/community-information/" } Community Information
+              %a.nav-link{ :href=>"/community-information/" } Community Information
             %li.nav-item{:class=>('active' if page.url =~ /^\/town-hall\//)}<
-              %a{ :href=>"/town-hall/" } Town Hall &amp; Community Centre
+              %a.nav-link{ :href=>"/town-hall/" } Town Hall &amp; Community Centre
             %li.nav-item{:class=>('active' if page.url =~ /^\/source-code\//)}<
-              %a{ :href=>"/source-code/" } Source Code
+              %a.nav-link{ :href=>"/source-code/" } Source Code
             %li.nav-item
-              %a{ :href=>"/news/atom.xml", :title=>"rss feed" }
+              %a.nav-link{ :href=>"/news/atom.xml", :title=>"rss feed" }
                 %i.fa.fa-rss-square.fa-lg
     %section{:id => "megatron", "data-speed" => "3", "data-type" => "background"}
       .jumbotron
