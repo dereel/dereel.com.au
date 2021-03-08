@@ -20,6 +20,8 @@ layout: base
     Dereel includes a large wetlands area, referred to as the "Swamp" or "Lagoon".
     During the 1930's this swamp area was used as a race course.
 
+  %hr
+
 - if site.posts and (Date.today - site.posts[0].date) < 60
   .panel.panel-default
     .panel-heading
@@ -55,7 +57,7 @@ layout: base
                   #{post.disqus_comments_link}
                 = post.disqus_comments_count
     .panel-footer
-      %p{:style=>"text-align:right;"}
+      %p{:style=>"text-align:right;margin-top:1em;"}
         %a.btn.btn-primary{ :href=>"/news/" }
           More News
           %i.fa.fa-chevron-right.fa-lg
@@ -66,11 +68,11 @@ layout: base
         %i.fa.fa-comments.fa-lg
         There is no recent news!
 
-
 .panel.panel-success
   .panel-heading
     %h4
       %i.fa.fa-exclamation-circle.fa-lg
       Adding Content
   .panel-body
-    If you have content you want added to this site please email it to: <code>scott@dereel.com.au</code>
+    If you have content you want added to this site please email it to: <code>scott@dereel.com.au</code> or
+    if you are feeling adventurous follow the instructions on <code><a href='/source-code'>/source-code</a></code>.

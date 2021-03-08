@@ -2,13 +2,15 @@
 layout: base
 ---
 = partial('post.html.haml', :parent => page, :post => page, :include_comments => true)
-%ul.pager
-  %li.previous{:class=>('disabled' unless page.previous_post)}
-    %a{:href=>page.previous_post ? page.previous_post.url : '#'}
+%ul.pagination.justify-content-center
+  %li.page-item{:class=>('disabled' unless page.previous_post)}
+    %a.page-link{:href=>page.previous_post ? page.previous_post.url : '#'}
       %i.fa.fa-arrow-left
       Previous
-  %li.pages Post #{site.posts.size - site.posts.index(page)} of #{site.posts.size}
-  %li.next{:class=>('disabled' unless page.next_post)}
-    %a{:href=>page.next_post ? page.next_post.url : '#'}
+  %li.page-item{:class=>'disabled'}
+    %a.page-link{:href=>'#'}
+      Post #{site.posts.size - site.posts.index(page)} of #{site.posts.size}
+  %li.page-item{:class=>('disabled' unless page.next_post)}
+    %a.page-link{:href=>page.next_post ? page.next_post.url : '#'}
       Next
       %i.fa.fa-arrow-right

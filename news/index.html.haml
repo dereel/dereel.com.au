@@ -5,13 +5,15 @@ title_link: /news/
 ---
 - page.posts.each do |post|
   = partial('post.html.haml', :parent => page, :post => post, :include_comments_count => post.equal?(page.posts.last))
-%ul.pager
-  %li.previous{:class=>('disabled' unless page.posts.next_page)}
-    %a{:href=>page.posts.next_page ? page.posts.next_page.url : '#'}
+%ul.pagination.justify-content-center
+  %li.page-item{:class=>('disabled' unless page.posts.previous_page)}
+    %a.page-link{:href=>page.posts.previous_page ? page.posts.previous_page.url : '#'}
       %i.fa.fa-arrow-left
-      Older news
-  %li.pages Page #{page.posts.current_page_index + 1} of #{page.posts.pages.size}
-  %li.next{:class=>('disabled' unless page.posts.previous_page)}
-    %a{:href=>page.posts.previous_page ? page.posts.previous_page.url : '#'}
       Newer news
+  %li.page-item{:class=>'disabled'}
+    %a.page-link{:href=>'#'}
+      Page #{page.posts.current_page_index + 1} of #{page.posts.pages.size}
+  %li.page-item{:class=>('disabled' unless page.posts.next_page)}
+    %a.page-link{:href=>page.posts.next_page ? page.posts.next_page.url : '#'}
+      Older news
       %i.fa.fa-arrow-right
